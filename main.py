@@ -94,17 +94,17 @@ def get_prediction():
                           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                           'Chrome/70.0.3538.102 Safari/537.36 Edge/18.19582')]
     urllib.request.install_opener(opener)
-    urllib.request.urlretrieve(img1, "left.png")
-    urllib.request.urlretrieve(img2, "right.png")
+    urllib.request.urlretrieve(img1, "images/left.png")
+    urllib.request.urlretrieve(img2, "images/right.png")
 
     # add images
     canvas1.delete("left")
-    img1 = Image.open("left.png").convert('RGBA')
+    img1 = Image.open("images/left.png").convert('RGBA')
     img1 = img1.resize((150, 150))
     img1 = ImageTk.PhotoImage(img1)
     canvas1.create_image(140, 150, image=img1, tags="left")
     canvas1.delete("right")
-    img2 = Image.open("right.png").convert('RGBA')
+    img2 = Image.open("images/right.png").convert('RGBA')
     img2 = img2.resize((150, 150))
     img2 = ImageTk.PhotoImage(img2)
     canvas1.create_image(560, 150, image=img2, tags="right")
@@ -167,7 +167,7 @@ canvas1.create_window(350, 150, window=vs)
 prediction = tk.Label(root, text='', font=('helvetica', 12))
 
 # add default images
-img = Image.open("default.png").convert('RGBA')
+img = Image.open("images/default.png").convert('RGBA')
 img = img.resize((150, 150))
 img = ImageTk.PhotoImage(img)
 
