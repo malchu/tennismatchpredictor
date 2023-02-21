@@ -1,0 +1,212 @@
+body {
+    background-color: rgb(34, 34, 34);
+}
+
+#form {
+    text-align: center;
+    display: inline-block;
+    width: 80%;
+}
+
+.form-control {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: azure;
+    border-color: azure;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.btn:hover {
+    background-color: rgb(0, 102, 255);
+    border-color: rgb(0, 102, 255);
+    color: azure;
+}
+
+a {
+    color: azure;
+}
+
+a:hover {
+    color: azure;
+    text-decoration: solid;
+}
+
+.navbar {
+    background-color: rgb(50, 60, 70);
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#navlogo {
+    height: 2rem;
+    padding-right: 1rem;
+}
+
+.button {
+    border-style: solid;
+    background-color:rgb(50, 60, 70);
+    color: azure;
+    border-color: rgb(50, 60, 70);
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.button:hover {
+    border-color: azure;
+    background-color: azure;
+    color: rgb(0, 102, 255);
+}
+
+div {
+    text-align: center;
+}
+
+#cards {
+    padding-bottom: 3rem;
+    z-index: 1;
+}
+
+.homepic {
+    height: 30rem;
+    width: 22.5rem;
+}
+
+.pic {
+    height: 30rem;
+}
+
+#hook {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+#buttondiv {
+    padding-bottom: 3rem;
+}
+
+#button {
+    background-color: rgb(34, 34, 34);
+    color: azure;
+    border-color: azure;
+    font-size: x-large;
+    padding: 1rem;
+    border-radius: 2rem;
+    border-style: solid;
+}
+
+#button:hover {
+    background-color :rgb(0, 102, 255);
+    border-color: rgb(0, 102, 255);
+}
+
+.delete {
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: azure;
+    border-color: azure;
+    border-style: solid;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgb(34, 34, 34);
+}
+
+.delete:hover {
+    background-color: rgb(219, 37, 37);
+    border-color: rgb(219, 37, 37);
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 1rem;
+}
+
+h2:hover {
+    color:darkgrey;
+}
+
+h3 {
+    color: azure;
+}
+
+p {
+    color: azure;
+}
+
+li {
+    color: azure;
+    text-align: left;
+}
+
+form {
+    margin-bottom: 4rem;
+}
+
+.badge {
+    margin-bottom: 1rem;
+}
+
+#prediction-meter {
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  margin-top: 3rem;
+}
+
+#prediction-meter div {
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#p1 {
+  background: #48bba8;
+}
+
+#p2 {
+  background: #ec4b96;
+}
+
+.link {
+    height: 3rem;
+    margin: 1rem;
+}
+
+.homelink {
+    height: 2rem;
+    margin: 0.5rem
+}
+
+table, tr, th, td {
+    margin: 0 auto;
+    color: azure;
+    border-color: azure;
+    border-style: solid;
+    padding: 1rem;
+}
+
+table {
+    margin-bottom: 2.5rem;
+}

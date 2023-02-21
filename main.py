@@ -21,7 +21,7 @@ def get_prediction():
 
     # scrape info for 2 players from rankings
     html_text = requests.get('https://www.atptour.com/en/rankings/singles?rankRange=1-5000').text
-    soup = BeautifulSoup(html_text, 'lxml')
+    soup = BeautifulSoup(html_text, 'html.parser')
     players = soup.find_all('tr', class_='')
     for player in players:
         rank = player.find('td', class_='rank-cell border-left-4 border-right-dash-1').text.strip()
@@ -42,7 +42,7 @@ def get_prediction():
     url = "https://www.atptour.com/en/players/atp-head-2-head/" + \
           one[0] + "-" + one[1] + "-vs-" + two[0] + "-" + two[1] + "/" + one_code + "/" + two_code
     html_text = requests.get(url).text
-    soup = BeautifulSoup(html_text, 'lxml')
+    soup = BeautifulSoup(html_text, 'html.parser')
 
     h2h = soup.find('table', class_='h2h-table h2h-table-ytd').text.split()
     # events = soup.find('table', class_="modal-event-breakdown-table").text.split()

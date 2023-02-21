@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Edit "{{ post['player1'] }} vs. {{ post['player2'] }}" {% endblock %}</h1>
+
+<form method="post">
+    <div id="form">
+    <div class="form-group">
+        <label for="player1">Player1</label>
+        <input type="text" name="player1" placeholder="Player1"
+               class="form-control"
+               value="{{ request.form['player1'] or post['player1'] }}">
+    </div>
+    <div class="form-group">
+        <label for="player2">Player2</label>
+        <input type="text" name="player2" placeholder="Player2"
+               class="form-control"
+               value="{{ request.form['player2'] or post['player2'] }}">
+    </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn">Submit</button>
+    </div>
+</form>
+<hr>
+
+<form action="{{ url_for('delete', id=post['id']) }}" method="POST">
+    <input type="submit" value="Delete Prediction"
+            class="delete"
+            onclick="return confirm('Are you sure you want to delete this prediction?')">
+</form>
+
+{% endblock %}

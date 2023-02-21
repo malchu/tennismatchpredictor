@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %} Prediction {% endblock %}</h2>
+    <h1>{{ w }} will win with a {{ c }}% chance!</h1>
+    <div>
+        <table>
+            <tr>
+              <th rowspan="3">{{w}} will win: </th>
+              <th>Set 1</th>
+              <th>Set 2</th>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>4</td>
+            </tr>
+        </table>
+    </div>
+    <div id="buttondiv">
+        <p>Powered by</p> 
+        <img id="navlogo" src="static/tmp.png">
+        <a class="navbar-brand" href="{{ url_for('index')}}">Tennis Match Predictor</a>
+    </div>
+    <div id="buttondiv">
+        <a href="{{url_for('create')}}"><button id="button"><strong>Create another prediction</strong></button></a>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Create a New Prediction {% endblock %}</h1>
+
+<form method="post">
+    <div id="form">
+    <div class="form-group">
+        <label for="player1">Player1</label>
+        <input type="text" name="player1"
+               placeholder="Player 1" class="form-control"
+               value="{{ request.form['player1'] }}">
+    </div>
+    <div class="form-group">
+        <label for="player2">Player2</label>
+        <input type="text" name="player2"
+               placeholder="Player 2" class="form-control"
+               value="{{ request.form['player2'] }}">
+    </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn">Submit</button>
+    </div>
+</form>
+<div>
+    <h3>How to Use</h3>
+    <p>
+        <ol>
+            <li>
+                Type in an ATP player's full name in the <em>Player 1</em> and <em>Player 2</em> boxes. 
+                The input is spelling and case sensitive, so make sure to spell their names correctly.
+            </li>
+            <li>
+                Click submit. You're all done! A prediction will be generated for you for your chosen tennis matchup. Go to <em>Prediction Log</em> to see all your predictions.
+            </li>
+        </ol>
+    </p>
+</div>
+{% endblock %}
