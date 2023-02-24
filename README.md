@@ -15,3 +15,4 @@ Tennis is a sophisticated sport. It can often be extremely difficult to predict 
 * View, update, and delete predictions in the prediction log 
 * Access live scores and results through the linked official ATP Tour website <br /> <br />
 ![](images/log.jpg)
+![](images/edit.jpg)
