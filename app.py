@@ -175,22 +175,32 @@ def predict(p1, p2):
     soup = BeautifulSoup(html_text, 'html.parser')
 
     h2h = soup.find('table', class_='h2h-table h2h-table-ytd').text.split()
-    # events = soup.find('table', class_="modal-event-breakdown-table").text.split()
+    events = soup.find('table', class_="modal-event-breakdown-table").text.split()
 
     # get profile and h2h stats
+    player = [p1, p2]
     wins1 = soup.find('div', class_='player-left-wins').find('div', class_="players-head-rank").text.strip()
     wins2 = soup.find('div', class_='player-right-wins').find('div', class_="players-head-rank").text.strip()
+    wins = [wins1, wins2]
     i = h2h.index("YTD")
     ytd_wl1, ytd_wl2 = h2h[i-1].split('/'), h2h[i+2].split('/')
+    ytd_wl = [ytd_wl1, ytd_wl2]
     ytd_titles1, ytd_titles2 = h2h[i+3], h2h[i+6]
+    ytd_titles = [ytd_titles1, ytd_titles2]
     wl1, wl2 = h2h[i+7].split('/'), h2h[i+10].split('/')
+    wl = [wl1, wl2]
     career_titles1, career_titles2 = h2h[i+11], h2h[i+14]
+    career_titles = [career_titles1, career_titles2]
+
+    # convert data to csv
+    dict = {'Player': player, 'Wins': wins, 'YTD Win/Loss': ytd_wl, 'YTD Titles': ytd_titles, 'Career Win/Loss': wl, 'Career Titles': career_titles}
 
     # calculate each player's score for this match-up
     win_value1 = int(points1) + (int(wins1))*8000 + (int(ytd_titles1))*70 + (int(career_titles1))*50 + int(wl1[0]) + \
         (int(ytd_wl1[0]))*1000 - (int(age1))*10 - (int(rank1)*50)
     win_value2 = int(points2) + (int(wins2))*8000 + (int(ytd_titles2))*70 + (int(career_titles2))*50 + int(wl2[0]) + \
         (int(ytd_wl2[0]))*1000 - (int(age2))*10 - (int(rank2)*50)
+    
     total = win_value1 + win_value2
     win_pct = win_value1 / total
 
