@@ -1,17 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Predict your favorite ATP tennis matches! {% endblock %}</h1>
+    <h1>{% block title %} Tennis Match Predictor {% endblock %}</h1>
     <div id="cards">
         <img class="homepic" src="static/federer.jpg">
         <img class="homepic" src="static/djokovic.jpg">
         <img class="homepic" src="static/nadal.jpg">
     </div>
     <div id="hook">
-        <h1>Predicted Wimbledon 2022 with over 72% accuracy!</h1>
-        <img class="pic" src="static/success.png">
+        <h1>Tested to predict with over 75% accuracy.</h1>
     </div>
     <div id="buttondiv">
-        <a href="{{url_for('create')}}"><button id="button"><strong>Predict a match now!</strong></button></a>
+        <a href="{{url_for('create')}}"><button id="button"><strong>Predict a match now</strong></button></a>
     </div>
 {% endblock %}
